@@ -1,18 +1,17 @@
 # coding: utf-8
+import fonction
 
-import re
+inscription = []
+nom = []
+prenom = []
+annee = []
 
-inscription = {"nom": input("indiquez votre nom \n"), "prenom": input("indiquez votre prenom \n"),
-               "annee": int(input("indique votre annee de naissance \n"))}
+inscrits = int(input("Combien d'adhérent voulez vous saisir ?\n"))
 
-
-def verif_mail(adresse):
-    rex = re.compile('[A-Z]{1}.[a-z]{7}@baton-rouge.fr')
-    if rex.fullmatch(adresse):
-        return True
-    else:
-        return False
-
+for i in range(inscrits):
+    nom.append(input("indiquez le nom de l'adherent\n"))
+    prenom.append(input("indiquez le prenom de l'adherent\n"))
+    annee.append(input("indique l'annee de naissance de l'adherent\n"))
 
 if inscription["annee"] > 2022 - 12:
     print("vous etes Poussin")
@@ -29,7 +28,7 @@ else:
 
 mail = input("indiquez votre adresse mail\n")
 
-if verif_mail(mail):
+if fonction.verif_mail(mail):
     print("mail accepter")
 else:
     print("mail incorrect")
