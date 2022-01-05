@@ -1,10 +1,10 @@
 # coding: utf-8
+
 import re
 
-inscription = []
-inscription["nom"] = input("indiquez votre nom \n")
-inscription["prenom"] = input("indiquez votre prenom \n")
-inscription["annee"] = int(input("indique votre annee de naissance \n"))
+inscription = {"nom": input("indiquez votre nom \n"), "prenom": input("indiquez votre prenom \n"),
+               "annee": int(input("indique votre annee de naissance \n"))}
+
 
 def verif_mail(adresse):
     rex = re.compile('[A-Z]{1}.[a-z]{7}@baton-rouge.fr')
