@@ -28,5 +28,4 @@ else:
     print("l'adherent est Non admissible")
 
 email = fonction.mail(prenom, nom)
-print("son adresse Email est:")
-print(email)
+print("son adresse Email est:",email)
