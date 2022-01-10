@@ -5,7 +5,6 @@ inscription = []
 nom = []
 prenom = []
 
-
 inscrits = int(input("Combien d'adhérent voulez vous saisir ?\n"))
 
 for i in range(inscrits):
@@ -13,7 +12,7 @@ for i in range(inscrits):
     prenom.append(input("indiquez le prenom de l'adherent\n"))
     annee = int(input("indique l'annee de naissance de l'adherent\n"))
 
-age = annee-2022
+age = annee - 2022
 
 if age < 12:
     print("l'adherent en catégorie Poussin")
@@ -29,5 +28,5 @@ else:
     print("l'adherent est Non admissible")
 
 email = fonction.mail(prenom, nom)
+print("son adresse Email est:")
 print(email)
-

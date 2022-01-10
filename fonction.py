@@ -2,5 +2,6 @@ import re
 
 
 def mail(prenom, nom):
-    adresse = str(prenom[0]+"."+nom+"@baton-rouge.fr")
-    return
+    fprnm= prenom[0][0]
+    return fprnm,".",nom,"@baton-rouge.fr"
+
