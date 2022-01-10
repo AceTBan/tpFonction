@@ -1,9 +1,6 @@
 import re
 
 
-def verif_mail(adresse):
-    rex = re.compile('[A-Z]{1}.[a-z]{7}@baton-rouge.fr')
-    if rex.fullmatch(adresse):
-        return True
-    else:
-        return False
+def mail(prenom, nom):
+    adresse = str(prenom[0]+"."+nom+"@baton-rouge.fr")
+    return

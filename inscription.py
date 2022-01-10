@@ -13,7 +13,7 @@ for i in range(inscrits):
     prenom.append(input("indiquez le prenom de l'adherent\n"))
     annee = int(input("indique l'annee de naissance de l'adherent\n"))
 
-age = 2022-annee
+age = annee-2022
 
 if age < 12:
     print("l'adherent en catégorie Poussin")
@@ -28,9 +28,6 @@ elif age <= 40:
 else:
     print("l'adherent est Non admissible")
 
-mail = input("indiquez votre adresse mail\n")
+email = fonction.mail(prenom, nom)
+print(email)
 
-if fonction.verif_mail(mail):
-    print("mail accepter")
-else:
-    print("mail incorrect")
