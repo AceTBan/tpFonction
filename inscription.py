@@ -13,16 +13,18 @@ for i in range(inscrits):
     prenom.append(input("indiquez le prenom de l'adherent\n"))
     annee.append(input("indique l'annee de naissance de l'adherent\n"))
 
-if inscription["annee"] > 2022 - 12:
-    print("vous etes Poussin")
-elif inscription["annee"] > 2022 - 18:
-    print("vous etes Cadet")
-elif inscription["annee"] > 2022 - 24:
-    print("vous etes Junior")
-elif inscription["annee"] > 2022 - 30:
-    print("vous etes Semi-pro")
-elif inscription["annee"] >= 2022 - 40:
-    print("vous etes pro")
+age = 2022-annee
+
+if age > 12:
+    print("vous etes en catégorie Poussin")
+elif age > 18:
+    print("vous etes en catégorie Cadet")
+elif age > 24:
+    print("vous etes en catégorie Junior")
+elif age > 30:
+    print("vous etes en catégorie Semi-pro")
+elif age >= 40:
+    print("vous etes en catégorie pro")
 else:
     print("Non admis")
 
