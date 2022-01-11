@@ -6,12 +6,30 @@ nom = []
 prenom = []
 annee = []
 
-inscrits = int(input("Combien d'adhérent voulez vous saisir ?\n"))
+saisie=False
+
+while saisie==False:
+    try:
+        inscrits = int(input("Combien d'adhérent a saisir ?\n"))
+        saisie = True
+    except ValueError:
+        print("Vous devez entrer un nombre entier")
+else:
+    continuer = False
 
 for i in range(inscrits):
     nom.append(input("indiquez le nom de l'adherent\n"))
     prenom.append(input("indiquez le prenom de l'adherent\n"))
-    annee.append(input("indique l'annee de naissance de l'adherent\n"))
+
+    continuer = True
+    while continuer:
+        annee.append(input("indique l'annee de naissance de l'adherent\n"))
+        try:
+            inscription["annee"] = int(inscription["annee"])
+        except ValueError:
+            print("indiquer l'année en chiffres (AAAA)")
+        else:
+            continuer = False
 
 if inscription["annee"] > 2022 - 12:
     print("vous etes Poussin")
@@ -32,3 +50,9 @@ if fonction.verif_mail(mail):
     print("mail accepter")
 else:
     print("mail incorrect")
+
+# while True:
+#     perso = input("Avez-vous d'autre inscription ? y/n \n")
+#     if perso == "n":
+#         break
+#     else:                 (essayer de mettre la saisi de l'adhérent dans fonction.py afin de l'appeler ici-
